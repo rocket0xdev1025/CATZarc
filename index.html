@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CATZ — just a cat.</title>
+  <meta name="description" content="CATZ rocks dark shades and a pink cap, bringing cool cat energy, bold vibes, and Arc-born meme chaos.">
+  <link rel="icon" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Permanent+Marker&family=Titan+One&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hot: "#ff2f9a",
+            cap: "#ff8fce",
+            ink: "#140018",
+            shade: "#09090b",
+          },
+          fontFamily: {
+            display: ["Titan One", "cursive"],
+            scribble: ["Permanent Marker", "cursive"],
+            body: ["Outfit", "sans-serif"],
+          },
+          boxShadow: {
+            sticker: "8px 8px 0 #09090b",
+            pinkstamp: "8px 8px 0 #ff2f9a",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    ::selection { background: #ff2f9a; color: #140018; }
+    body {
+      font-family: Outfit, sans-serif;
+      color: #fff7fb;
+      background-color: #140018;
+      background-image: url("bg.png");
+      background-size: cover;
+      background-position: center top;
+      background-attachment: fixed;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        linear-gradient(180deg, rgba(12, 0, 22, 0.55) 0%, rgba(12, 0, 22, 0.18) 28%, rgba(12, 0, 22, 0.28) 58%, rgba(8, 0, 16, 0.72) 100%);
+    }
+    .page { position: relative; z-index: 1; }
+    section { scroll-margin-top: 5.5rem; }
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    .ticker-track { animation: ticker 28s linear infinite; }
+    @keyframes bob {
+      0%, 100% { transform: translateY(0) rotate(-3deg); }
+      50% { transform: translateY(-8px) rotate(2deg); }
+    }
+    .bob { animation: bob 4.5s ease-in-out infinite; }
+    .tape {
+      position: absolute;
+      z-index: 2;
+      width: 7.5rem;
+      height: 1.7rem;
+      background: rgba(255, 143, 206, 0.72);
+      border: 2px solid rgba(9, 9, 11, 0.35);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    }
+    @media (max-width: 768px) {
+      body { background-attachment: scroll; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .ticker-track, .bob { animation: none; }
+    }
+  </style>
+</head>
+<body class="min-h-screen antialiased">
+  <div class="page">
+    <header class="sticky top-0 z-50 border-b-4 border-black bg-ink/80 backdrop-blur-md">
+      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-3">
+        <a href="#top" class="flex items-center gap-3">
+          <img src="logo.png" alt="CATZ logo" class="h-12 w-12 rounded-full border-2 border-black bg-hot object-cover shadow-pinkstamp">
+          <span class="font-display text-2xl tracking-wide text-hot">CATZ</span>
+        </a>
+        <nav class="order-3 flex w-full items-center justify-center gap-5 text-sm font-bold uppercase tracking-wider text-cap sm:order-none sm:w-auto sm:text-base">
+          <a href="#vibe" class="hover:text-white">The Vibe</a>
+          <a href="#buy" class="hover:text-white">How to Buy</a>
+          <a href="#chart" class="hover:text-white">Chart</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <a href="https://x.com/CATZarc" target="_blank" rel="noopener noreferrer" class="grid h-11 w-11 place-items-center rounded-xl border-4 border-black bg-black shadow-[4px_4px_0_#ff2f9a]" aria-label="CATZ on X">
+            <img src="x.png" alt="" class="h-6 w-6 object-contain">
+          </a>
+          <a href="https://dexscreener.com/arc/TBA" target="_blank" rel="noopener noreferrer" class="hidden rounded-full border-4 border-black bg-shade px-4 py-2 text-sm font-extrabold text-hot shadow-[4px_4px_0_#ff2f9a] sm:inline-block">Chart</a>
+          <a href="https://argus.world/token/TBA" target="_blank" rel="noopener noreferrer" class="rounded-full border-4 border-black bg-hot px-4 py-2 text-sm font-extrabold text-ink shadow-sticker">Buy Now</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="mx-auto max-w-6xl px-4 pb-6 pt-10 md:pt-16">
+        <div class="relative overflow-hidden rounded-[2rem] border-4 border-black bg-ink/80 p-6 shadow-pinkstamp backdrop-blur-md md:p-10">
+          <p class="font-scribble text-2xl text-cap md:text-3xl">just a cat.</p>
+          <div class="mt-2 flex flex-wrap items-end gap-4">
+            <h1 class="font-display text-6xl leading-none text-hot drop-shadow-[4px_4px_0_#09090b] sm:text-7xl md:text-8xl">CATZ</h1>
+            <span class="mb-2 rounded-full border-4 border-black bg-hot px-4 py-1 font-display text-xl text-ink shadow-[4px_4px_0_#09090b]">$CATZ</span>
+          </div>
+          <p class="mt-5 max-w-3xl text-lg font-semibold leading-relaxed text-white md:text-2xl">
+            CATZ rocks dark shades and a pink cap, bringing cool cat energy, bold vibes, and Arc-born meme chaos.
+          </p>
+          <p class="mt-3 max-w-2xl text-base font-medium text-cap/90">
+            Symbol <span class="font-extrabold text-white">CATZ</span>. Paid in Arc USDC. Zero chill, full neon.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-3 lg:flex-row lg:items-center">
+            <div class="flex min-w-0 flex-1 items-center gap-3 rounded-2xl border-4 border-black bg-shade px-4 py-3 shadow-sticker">
+              <div class="min-w-0">
+                <p class="text-xs font-bold uppercase tracking-[0.2em] text-cap">Contract</p>
+                <p id="ca-value" class="truncate font-display text-2xl text-hot">TBA</p>
+              </div>
+              <button type="button" data-copy class="ml-auto shrink-0 rounded-full border-4 border-hot bg-hot px-4 py-2 text-sm font-extrabold text-ink">
+                <span data-copy-label>Copy CA</span>
+              </button>
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <a href="https://argus.world/token/TBA" target="_blank" rel="noopener noreferrer" class="rounded-full border-4 border-black bg-hot px-6 py-3 text-center font-extrabold text-ink shadow-sticker transition hover:-translate-y-0.5">Buy Now</a>
+              <a href="https://dexscreener.com/arc/TBA" target="_blank" rel="noopener noreferrer" class="rounded-full border-4 border-black bg-white px-6 py-3 text-center font-extrabold text-ink shadow-sticker transition hover:-translate-y-0.5">Chart</a>
+              <a href="https://x.com/CATZarc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border-4 border-black bg-shade px-4 py-3 font-extrabold text-white shadow-sticker">
+                <img src="x.png" alt="" class="h-5 w-5">
+                <span>X</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <figure class="relative mx-auto mt-8 max-w-5xl">
+          <span class="tape -top-3 left-8 -rotate-6"></span>
+          <span class="tape -top-3 right-10 rotate-3"></span>
+          <img src="x_CATZ.jpg" alt="CATZ in a pink cap and dark shades against a neon Arc skyline" class="w-full rounded-[1.6rem] border-4 border-black object-cover shadow-sticker">
+        </figure>
+      </section>
+
+      <div class="mt-8 overflow-hidden border-y-4 border-black bg-hot text-ink">
+        <div class="ticker-track flex w-max py-3 font-display text-xl tracking-wide">
+          <p class="flex shrink-0 gap-8 px-4">
+            <span>JUST A CAT</span><span>✦</span>
+            <span>DARK SHADES</span><span>✦</span>
+            <span>PINK CAP</span><span>✦</span>
+            <span>$CATZ</span><span>✦</span>
+            <span>ARC USDC</span><span>✦</span>
+            <span>COOL CAT ENERGY</span><span>✦</span>
+            <span>MEME CHAOS</span><span>✦</span>
+          </p>
+          <p class="flex shrink-0 gap-8 px-4" aria-hidden="true">
+            <span>JUST A CAT</span><span>✦</span>
+            <span>DARK SHADES</span><span>✦</span>
+            <span>PINK CAP</span><span>✦</span>
+            <span>$CATZ</span><span>✦</span>
+            <span>ARC USDC</span><span>✦</span>
+            <span>COOL CAT ENERGY</span><span>✦</span>
+            <span>MEME CHAOS</span><span>✦</span>
+          </p>
+        </div>
+      </div>
+
+      <section id="vibe" class="mx-auto max-w-6xl px-4 py-16 md:py-20">
+        <div class="mb-8 flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p class="font-scribble text-2xl text-cap">the fit</p>
+            <h2 class="font-display text-4xl text-white drop-shadow-[3px_3px_0_#ff2f9a] md:text-5xl">Cool cat energy</h2>
+          </div>
+          <img src="logo.png" alt="" class="bob h-24 w-24 rounded-full border-4 border-black bg-hot object-cover shadow-sticker">
+        </div>
+        <div class="grid gap-5 md:grid-cols-3">
+          <article class="rounded-[1.6rem] border-4 border-black bg-shade/90 p-6 shadow-pinkstamp backdrop-blur-sm md:-rotate-1">
+            <p class="font-display text-3xl text-hot">01</p>
+            <h3 class="mt-2 text-2xl font-extrabold">Dark shades</h3>
+            <p class="mt-3 font-medium leading-relaxed text-white/85">Gloss black lenses. Unbothered stare. CATZ does not squint at the timeline — the timeline squints first.</p>
+          </article>
+          <article class="rounded-[1.6rem] border-4 border-black bg-hot p-6 text-ink shadow-sticker md:translate-y-4">
+            <p class="font-display text-3xl">02</p>
+            <h3 class="mt-2 text-2xl font-extrabold">Pink cap</h3>
+            <p class="mt-3 font-semibold leading-relaxed">Knit, loud, and embroidered like a secret handshake: just a cat. The crown is optional. The cap is not.</p>
+          </article>
+          <article class="rounded-[1.6rem] border-4 border-black bg-shade/90 p-6 shadow-pinkstamp backdrop-blur-sm md:rotate-1">
+            <p class="font-display text-3xl text-hot">03</p>
+            <h3 class="mt-2 text-2xl font-extrabold">Arc-born chaos</h3>
+            <p class="mt-3 font-medium leading-relaxed text-white/85">Hatched on Arc, swapped with USDC, built for bold vibes. Meme first. Shades on. The city stays neon.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="buy" class="mx-auto max-w-6xl px-4 pb-16">
+        <div class="rounded-[2rem] border-4 border-black bg-ink/85 p-6 shadow-sticker backdrop-blur-md md:p-10">
+          <p class="font-scribble text-2xl text-cap">Arc USDC in. Shades on.</p>
+          <h2 class="mt-1 font-display text-4xl text-hot md:text-5xl">How to Buy</h2>
+          <p class="mt-4 max-w-3xl text-lg font-medium text-white/90">
+            $CATZ trades against Arc USDC. Four moves, then you are in the pink cap club. Match the contract on this page before you swap.
+          </p>
+
+          <ol class="mt-8 grid gap-4 md:grid-cols-2">
+            <li class="rounded-3xl border-4 border-black bg-shade p-5 shadow-[6px_6px_0_#ff2f9a]">
+              <div class="flex items-center gap-3">
+                <span class="grid h-12 w-12 place-items-center rounded-2xl border-4 border-black bg-hot font-display text-xl text-ink">1</span>
+                <h3 class="text-xl font-extrabold">Add Arc to your wallet</h3>
+              </div>
+              <p class="mt-3 font-medium leading-relaxed text-white/85">Use MetaMask or any EVM wallet and switch to the Arc network. That is home base for every $CATZ buy.</p>
+            </li>
+            <li class="rounded-3xl border-4 border-black bg-shade p-5 shadow-[6px_6px_0_#ff2f9a]">
+              <div class="flex items-center gap-3">
+                <span class="grid h-12 w-12 place-items-center rounded-2xl border-4 border-black bg-hot font-display text-xl text-ink">2</span>
+                <h3 class="text-xl font-extrabold">Load Arc USDC</h3>
+              </div>
+              <p class="mt-3 font-medium leading-relaxed text-white/85">Bridge USDC onto Arc. On Arc, USDC is the cash and the gas, so one balance covers the swap and the fee.</p>
+            </li>
+            <li class="rounded-3xl border-4 border-black bg-shade p-5 shadow-[6px_6px_0_#ff2f9a]">
+              <div class="flex items-center gap-3">
+                <span class="grid h-12 w-12 place-items-center rounded-2xl border-4 border-black bg-hot font-display text-xl text-ink">3</span>
+                <h3 class="text-xl font-extrabold">Open Argus</h3>
+              </div>
+              <p class="mt-3 font-medium leading-relaxed text-white/85">Hit Buy Now, connect the wallet, and stay on Arc. You are swapping Arc USDC for $CATZ — symbol CATZ.</p>
+            </li>
+            <li class="rounded-3xl border-4 border-black bg-hot p-5 text-ink shadow-sticker">
+              <div class="flex items-center gap-3">
+                <span class="grid h-12 w-12 place-items-center rounded-2xl border-4 border-black bg-ink font-display text-xl text-hot">4</span>
+                <h3 class="text-xl font-extrabold">Swap into $CATZ</h3>
+              </div>
+              <p class="mt-3 font-semibold leading-relaxed">Paste the contract if the box asks, set the USDC amount, check the quote, and confirm. Dark shades. Pink cap. You are early to the chaos.</p>
+            </li>
+          </ol>
+
+          <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <a href="https://argus.world/token/TBA" target="_blank" rel="noopener noreferrer" class="rounded-full border-4 border-black bg-hot px-6 py-3 text-center font-extrabold text-ink shadow-sticker">Buy Now</a>
+            <button type="button" data-copy class="rounded-full border-4 border-black bg-white px-6 py-3 text-center font-extrabold text-ink shadow-sticker">
+              <span data-copy-label>Copy CA · TBA</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="chart" class="mx-auto max-w-6xl px-4 pb-20">
+        <div class="mb-5 flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p class="font-scribble text-2xl text-cap">watch the grid</p>
+            <h2 class="font-display text-4xl text-white drop-shadow-[3px_3px_0_#ff2f9a] md:text-5xl">Chart</h2>
+          </div>
+          <a href="https://dexscreener.com/arc/TBA" target="_blank" rel="noopener noreferrer" class="rounded-full border-4 border-black bg-hot px-5 py-2.5 font-extrabold text-ink shadow-sticker">Open Chart</a>
+        </div>
+        <div class="overflow-hidden rounded-[1.6rem] border-4 border-black bg-shade shadow-pinkstamp">
+          <div class="flex items-center gap-2 border-b-4 border-black bg-hot px-4 py-3">
+            <span class="h-3 w-3 rounded-full border-2 border-black bg-ink"></span>
+            <span class="h-3 w-3 rounded-full border-2 border-black bg-white"></span>
+            <span class="h-3 w-3 rounded-full border-2 border-black bg-cap"></span>
+            <span class="ml-2 text-sm font-extrabold text-ink">dexscreener · arc · CATZ</span>
+          </div>
+          <iframe
+            title="CATZ chart on Dexscreener"
+            src="https://dexscreener.com/arc/TBA?embed=1&loadChartSettings=0&chartLeftToolbar=0&chartTheme=dark&theme=dark&chartStyle=1&chartType=usd&interval=15"
+            class="h-[32rem] w-full bg-shade"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t-4 border-black bg-ink/90">
+      <div class="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 md:flex-row md:items-center md:justify-between">
+        <div class="flex items-center gap-3">
+          <img src="logo.png" alt="" class="h-14 w-14 rounded-full border-4 border-black object-cover">
+          <div>
+            <p class="font-display text-2xl text-hot">CATZ</p>
+            <p class="font-scribble text-cap">just a cat.</p>
+          </div>
+        </div>
+        <p class="max-w-md text-sm font-medium text-white/75">
+          CATZ rocks dark shades and a pink cap, bringing cool cat energy, bold vibes, and Arc-born meme chaos. Symbol CATZ. Meme coin — do your own homework.
+        </p>
+        <div class="flex items-center gap-2">
+          <a href="https://x.com/CATZarc" target="_blank" rel="noopener noreferrer" class="grid h-12 w-12 place-items-center rounded-xl border-4 border-black bg-black" aria-label="CATZ on X">
+            <img src="x.png" alt="" class="h-6 w-6">
+          </a>
+          <a href="https://argus.world/token/TBA" target="_blank" rel="noopener noreferrer" class="rounded-full border-4 border-black bg-hot px-4 py-2 font-extrabold text-ink">Buy Now</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const CA = "TBA";
+    document.querySelectorAll("[data-copy]").forEach((button) => {
+      button.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(CA);
+        } catch (err) {
+          const area = document.createElement("textarea");
+          area.value = CA;
+          document.body.appendChild(area);
+          area.select();
+          document.execCommand("copy");
+          area.remove();
+        }
+        const label = button.querySelector("[data-copy-label]");
+        const previous = label.textContent;
+        label.textContent = "Copied";
+        setTimeout(() => { label.textContent = previous; }, 1400);
+      });
+    });
+  </script>
+</body>
+</html>
